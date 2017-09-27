@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CanvasDrawing</string>
+    <string name="write_something_on_the_board_or_draw_on_the_board">Write something on the board or draw on the board</string>
+</resources>
