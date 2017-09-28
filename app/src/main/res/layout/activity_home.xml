@@ -11,66 +11,104 @@
     <com.canvasdrawing.CommonFiles.CanvasView
         android:id="@+id/view_draw"
         android:layout_width="match_parent"
+
         android:layout_height="match_parent" />
 
-    <LinearLayout
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fillViewport="true">
 
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="5sp"
-            android:layout_weight="1"
-            android:onClick="OnBrush"
-            android:padding="15sp"
-            android:src="@mipmap/ic_brush"
-            android:tint="@android:color/white" />
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="5sp"
-            android:layout_weight="1"
-            android:onClick="OnRedo"
-            android:padding="15sp"
-            android:src="@mipmap/ic_redo" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:onClick="OnBrush"
+                android:padding="15sp"
+                android:src="@mipmap/ic_artistic_brush"
+                android:tint="@android:color/white" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="5sp"
-            android:layout_weight="1"
-            android:onClick="OnUndo"
-            android:padding="15sp"
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:onClick="OnUndo"
+                android:padding="15sp"
 
-            android:src="@mipmap/ic_undo" />
+                android:src="@mipmap/ic_undo_arrow" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="5sp"
-            android:layout_weight="1"
-            android:onClick="OnEraser"
-            android:padding="15sp"
-            android:src="@mipmap/ic_eraser" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:onClick="OnRedo"
+                android:padding="15sp"
+                android:src="@mipmap/ic_redoarrow" />
 
-    </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:onClick="OnEraser"
+                android:padding="15sp"
+                android:src="@mipmap/ic_eraser" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:onClick="OnBrushSize"
+                android:padding="15sp"
+                android:src="@mipmap/ic_photo_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:onClick="OnEraseAll"
+                android:padding="15sp"
+                android:src="@mipmap/ic_eraser_all" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10sp"
+
+        android:spinnerMode="dialog"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10sp"
-        android:textStyle="italic"
-        android:textColor="@android:color/black"
         android:layout_centerInParent="true"
-        android:text="@string/write_something_on_the_board_or_draw_on_the_board" />
+        android:padding="10sp"
+        android:text="@string/write_something_on_the_board_or_draw_on_the_board"
+        android:textColor="@android:color/black"
+        android:textStyle="italic" />
 </RelativeLayout>
