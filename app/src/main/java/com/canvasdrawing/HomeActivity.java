@@ -16,6 +16,12 @@ import android.widget.Toast;
 import com.canvasdrawing.CommonFiles.CanvasView;
 import com.canvasdrawing.CommonFiles.Util;
 
+/**
+ *
+ * Author :  VadivelChinnasamy
+ * Title : Drawing view
+ * */
+
 public class HomeActivity extends Activity {
 
     private CanvasView mCanvasView;

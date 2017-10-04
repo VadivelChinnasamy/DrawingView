@@ -90,13 +90,16 @@
 
 
         </LinearLayout>
+
     </HorizontalScrollView>
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="70sp"
+        android:layout_marginTop="70sp"
         android:padding="10sp"
 
         android:spinnerMode="dialog"
@@ -110,5 +113,6 @@
         android:padding="10sp"
         android:text="@string/write_something_on_the_board_or_draw_on_the_board"
         android:textColor="@android:color/black"
+        android:textSize="16sp"
         android:textStyle="italic" />
 </RelativeLayout>
